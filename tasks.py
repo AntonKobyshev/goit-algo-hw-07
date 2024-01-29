@@ -1,3 +1,5 @@
+import uuid  
+
 class BinaryTree:
     class Node:
         def __init__(self, key, data=None, left_node=None, right_node=None):
@@ -5,6 +7,10 @@ class BinaryTree:
             self.data = data
             self.left_node = left_node
             self.right_node = right_node
+            self.uuid = uuid.uuid4()  
+
+        def __str__(self):
+            return str(self.key)
 
         def __str__(self):
             return str(self.key)
